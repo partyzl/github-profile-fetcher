@@ -1,3 +1,4 @@
+import React from 'react';
 import { ProfileInfo, UserSearch } from '../components';
 
 const Home = () => {

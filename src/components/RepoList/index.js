@@ -1,9 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const RepoList = () => {
 	const { results } = useSelector((state) => state.reposReducer);
 
-	return {};
+	return (
+        {results.map((repo, idx) => {
+            <Link key={idx} to={`/repo/${username}/repos/${repo.name}`}>
+                <h4>{repo.name}</h4>
+            </Link>;
+        })}
+    )
 };
 
 /*
