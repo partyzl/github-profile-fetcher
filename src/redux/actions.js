@@ -16,7 +16,7 @@ export const getUserInfo = (username) => async (dispatch) => {
 	dispatch({ type: LOADING_USER });
 
 	try {
-		const data = await axios.get(`https://api.github.com/users/${username}`);
+		const { data } = await axios.get(`https://api.github.com/users/${username}`);
 		dispatch({ type: SEARCH_USER_SUCCESS, payload: data });
 	} catch (error) {
 		dispatch({ type: SEARCH_USER_FAILURE, payload: error.message });
@@ -32,7 +32,7 @@ export const getRepos = (username) => async (dispatch) => {
 	dispatch({ type: LOADING_REPO });
 
 	try {
-		const data = await axios.get(`https://api.github.com/users/${username}/repos`);
+		const { data } = await axios.get(`https://api.github.com/users/${username}/repos`);
 		dispatch({ type: SEARCH_REPO_SUCCESS, payload: data });
 	} catch (error) {
 		dispatch({ type: SEARCH_REPO_FAILURE, payload: error.message });

@@ -1,13 +1,16 @@
 import React from 'react';
+import { getRepos } from '../../redux/actions';
 
 export default ({ getUser }) => {
 	const [input, setInput] = useState('');
+	const dispatch = useDispatch();
 
 	const handleChange = (e) => setInput(e.target.value);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		getUser(input);
+		dispatch(getRepos(input));
+		dispatch(getUserInfo(input));
 		setInput('');
 	};
 
@@ -24,4 +27,3 @@ export default ({ getUser }) => {
 		</>
 	);
 };
-
