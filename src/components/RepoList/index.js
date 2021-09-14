@@ -5,12 +5,11 @@ const RepoList = () => {
 	const { results } = useSelector((state) => state.reposReducer);
 
 	return (
-        {results.map((repo, idx) => {
-            <Link key={idx} to={`/repo/${username}/repos/${repo.name}`}>
-                <h4>{repo.name}</h4>
-            </Link>;
-        })}
-    )
+		<div>
+			<h2>`{results.login}'s Repos</h2>
+			<div className="repo-list"></div>
+		</div>
+	);
 };
 
 /*
