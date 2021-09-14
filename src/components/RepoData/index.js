@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ repoTitle, repoLink, forks, stargazers, watchers }) => {
+export default ({ repoLink, repoTitle, forks, stargazers, watchers }) => {
 	return (
 		<>
 			<h1>

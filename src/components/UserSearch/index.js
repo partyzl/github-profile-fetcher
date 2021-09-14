@@ -1,7 +1,8 @@
-import React from 'react';
-import { getRepos } from '../../redux/actions';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { getRepos, getUserInfo } from '../../redux/actions';
 
-export default ({ getUser }) => {
+export default () => {
 	const [input, setInput] = useState('');
 	const dispatch = useDispatch();
 
