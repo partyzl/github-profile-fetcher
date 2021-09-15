@@ -1,5 +1,4 @@
 body {
-	margin-top: 50px;
 	display: flex;
 	justify-content: center;
 	margin-bottom: 100px;
@@ -16,6 +15,7 @@ input {
 	border-bottom: none;
 	background-color: white;
 	padding: 5px;
+	margin-bottom: 20px;
 }
 
 #search-btn {
@@ -47,7 +47,6 @@ a {
 
 a:hover {
 	font-size: larger;
-	color: grey;
 }
 
 .username {
@@ -58,6 +57,8 @@ a:hover {
 
 .logo {
 	border: none;
+	height: 20px;
+	padding-bottom: 10px;
 }
 .profile-data {
 	margin-left: 10px;
@@ -84,5 +85,10 @@ a:hover {
 }
 
 #back-btn:hover {
-	color: gray;
+	color: grey;
+}
+
+.search-element {
+	background-color: white;
+	padding-top: 30px;
 }
