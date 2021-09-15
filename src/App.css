@@ -2,6 +2,7 @@ body {
 	margin-top: 50px;
 	display: flex;
 	justify-content: center;
+	margin-bottom: 100px;
 }
 
 img {
@@ -36,4 +37,9 @@ input {
 a {
 	text-decoration: none;
 	color: black;
+}
+
+.username {
+	text-transform: uppercase;
+	justify-content: center;
 }
