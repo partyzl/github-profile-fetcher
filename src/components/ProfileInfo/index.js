@@ -6,12 +6,22 @@ const ProfileInfo = () => {
 
 	return (
 		<>
-			<h2>{user.login}</h2>
-			<div>
-				{user.avatar_url ? <img src={user.avatar_url} alt="User's Profile Picture" /> : <p></p>}
+			<div className="container d-flex justify-content-center">
+				<div id="profie-pic">
+					{user.avatar_url ? <img src={user.avatar_url} alt="User's Profile Picture" /> : <p></p>}
+				</div>
+				<div className="profile-data">
+					<h1 className="username">{user.login}</h1>
+					<h3>{user.location ? user.location : ''}</h3>
+					{user.html_url ? (
+						<a className="visit-link" href={user.html_url} target="_blank">
+							Visit
+						</a>
+					) : (
+						''
+					)}
+				</div>
 			</div>
-			<a href={user.html_url} target="_blank"></a>
-			<h3>{user.location ? user.location : ''}</h3>
 		</>
 	);
 };

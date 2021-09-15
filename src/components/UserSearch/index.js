@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getRepos, getUserInfo } from '../../redux/actions';
+import github from '../../images/github.svg';
 
 export default () => {
 	const [input, setInput] = useState('');
@@ -17,14 +18,21 @@ export default () => {
 
 	return (
 		<>
-			<h1>Search for a user!</h1>
-			<form className="user-search" onSubmit={handleSubmit}>
-				<label>
-					github.com/
-					<input type="text" placeholder="username" onChange={handleChange} value={input} />
-				</label>
-				<input type="submit" value="Search" />
-			</form>
+			<div className="search-element d-flex justify-content-center sticky-top">
+				<img className="logo" src={github} alt="Github logo" />
+				<form className="user-search" onSubmit={handleSubmit}>
+					<label>
+						github.com/
+						<input
+							type="text"
+							placeholder="Search or jump to..."
+							onChange={handleChange}
+							value={input}
+						/>
+					</label>
+					<input id="search-btn" type="submit" value="Search" />
+				</form>
+			</div>
 		</>
 	);
 };
