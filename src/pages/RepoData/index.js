@@ -1,6 +1,10 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { useParams } from 'react-router';
 
-export default ({ repoLink, repoTitle, forks, stargazers, watchers }) => {
+const RepoData = () => {
+	const { results } = useSelector((state) => state.reposReducer);
+
 	return (
 		<>
 			<h1>
@@ -14,6 +18,8 @@ export default ({ repoLink, repoTitle, forks, stargazers, watchers }) => {
 		</>
 	);
 };
+
+export default RepoData;
 
 /*
 name
