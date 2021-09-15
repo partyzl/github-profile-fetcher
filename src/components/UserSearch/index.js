@@ -17,14 +17,21 @@ export default () => {
 
 	return (
 		<>
-			<h1>Search for a user!</h1>
-			<form className="user-search" onSubmit={handleSubmit}>
-				<label>
-					github.com/
-					<input type="text" placeholder="username" onChange={handleChange} value={input} />
-				</label>
-				<input type="submit" value="Search" />
-			</form>
+			<div className="search-element">
+				<img src="../../images/github.svg" alt="Github logo" />
+				<form className="user-search" onSubmit={handleSubmit}>
+					<label>
+						github.com/
+						<input
+							type="text"
+							placeholder="Search or jump to..."
+							onChange={handleChange}
+							value={input}
+						/>
+					</label>
+					<input id="search-btn" type="submit" value="Search" />
+				</form>
+			</div>
 		</>
 	);
 };
