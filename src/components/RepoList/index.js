@@ -16,20 +16,13 @@ const RepoList = () => {
 		};
 		renderRepos();
 	}, [results]);
-	//I think we need to add the below into the actions, unless you want to add them here
+
 	return (
 		<>
+			{results.length ? <h2> {results[0].owner.login}'s Repos</h2> : ''}
 			<div className="repo-list">{repoList}</div>
 		</>
 	);
 };
 
 export default RepoList;
-/*
-name
-html_url
-stargazers_count
-watchers_count
-forks_count
-language
-*/
