@@ -20,7 +20,7 @@ export default () => {
 		<>
 			<div className="search-element d-flex justify-content-center sticky-top">
 				<img
-					className="logo bi bi-github"
+					className="logo"
 					src="https://www.pngarts.com/files/8/Github-Logo-Transparent-Background-PNG.png"
 					alt="Github logo"
 				/>
