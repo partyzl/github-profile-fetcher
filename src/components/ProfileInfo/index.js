@@ -6,7 +6,7 @@ const ProfileInfo = () => {
 
 	return (
 		<>
-			<div className="container d-flex justify-content-center">
+			<div className="container d-flex justify-content-center profile-box">
 				<div id="profie-pic">
 					{user.avatar_url ? <img src={user.avatar_url} alt="User's Profile Picture" /> : <p></p>}
 				</div>
