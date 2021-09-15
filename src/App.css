@@ -31,7 +31,7 @@ input {
 img {
 	border-radius: 100%;
 	border: 1px solid black;
-	height: 100px;
+	height: 150px;
 }
 
 a {
@@ -56,6 +56,21 @@ a:hover {
 .logo {
 	border: none;
 }
+.profile-data {
+	margin-left: 10px;
+}
+.visit-link {
+	border-bottom: none;
+	background-color: none !important;
+}
+.visit-link:hover {
+	background-color: none !important;
+}
 
-.profile-card {
+.repo-username {
+	text-transform: capitalize;
+	margin-bottom: 30px;
+	text-align: center;
+	border-top: 1px solid black;
+	padding-top: 15px;
 }
