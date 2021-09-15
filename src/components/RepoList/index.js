@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import './repoList.css';
 
 const RepoList = () => {
 	const [repoList, setRepoList] = useState([]);
@@ -7,7 +9,9 @@ const RepoList = () => {
 
 	useEffect(() => {
 		const renderRepos = () => {
-			const userRepos = results.map((repo) => <Link to={`/user${repo.name}`}> {repo.name}</Link>);
+			const userRepos = results.map((repo) => (
+				<Link to={`/${repo.owner.login}/${repo.name}`}> {repo.name}</Link>
+			));
 			setRepoList(userRepos);
 		};
 		renderRepos();
@@ -20,6 +24,7 @@ const RepoList = () => {
 	);
 };
 
+export default RepoList;
 /*
 name
 html_url

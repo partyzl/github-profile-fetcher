@@ -14,3 +14,12 @@ export default ({ repoLink, repoTitle, forks, stargazers, watchers }) => {
 		</>
 	);
 };
+
+/*
+name
+html_url
+stargazers_count
+watchers_count
+forks_count
+language
+*/

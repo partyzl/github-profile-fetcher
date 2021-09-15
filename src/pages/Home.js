@@ -1,11 +1,12 @@
 import React from 'react';
-import { ProfileInfo, UserSearch } from '../components';
+import { ProfileInfo, RepoList, UserSearch } from '../components';
 
 const Home = () => {
 	return (
 		<>
 			<UserSearch />
 			<ProfileInfo />
+			<RepoList />
 		</>
 	);
 };
