@@ -24,5 +24,5 @@ npm run dev
 - Back Button
 ---
 ## Authors
-- (Tobi)[https://github.com/tobikuyo]
-- (Parth)[https://github.com/partyzl]
+- [Tobi](https://github.com/tobikuyo)
+- [Parth](https://github.com/partyzl)
