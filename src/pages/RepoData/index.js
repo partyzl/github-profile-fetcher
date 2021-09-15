@@ -19,10 +19,18 @@ const RepoData = () => {
 				<a href={html_url}>{name}</a>
 			</h1>
 			<div className="repo-info">
-				<p>Number of Forks: {forks_count}</p>
-				<p>Number of Stargazers: {stargazers_count}</p>
-				<p>Number of Watchers: {watchers_count}</p>
-				<p>Main Language: {language}</p>
+				<div className="flex-column">
+					<p>Forks: {forks_count}</p>
+				</div>
+				<div className="flex-column">
+					<p>Stargazers: {stargazers_count}</p>
+				</div>
+				<div className="flex-column">
+					<p>Watchers: {watchers_count}</p>
+				</div>
+				<div className="flex-column">
+					<p>Language: {language}</p>
+				</div>
 			</div>
 		</>
 	);
