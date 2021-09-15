@@ -28,7 +28,7 @@ input {
 	background-color: black;
 	color: white;
 }
-#profile-pic {
+img {
 	border-radius: 100%;
 	border: 1px solid black;
 	height: 100px;
@@ -37,9 +37,25 @@ input {
 a {
 	text-decoration: none;
 	color: black;
+	border-bottom: 1px solid black;
+	padding-bottom: 50px;
+	text-transform: capitalize;
+}
+
+a:hover {
+	background-color: darkgrey;
+	color: white;
 }
 
 .username {
 	text-transform: uppercase;
 	justify-content: center;
+	margin-top: 10px;
+}
+
+.logo {
+	border: none;
+}
+
+.profile-card {
 }

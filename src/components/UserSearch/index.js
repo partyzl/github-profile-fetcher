@@ -17,8 +17,8 @@ export default () => {
 
 	return (
 		<>
-			<div className="search-element">
-				<img src="../../images/github.svg" alt="Github logo" />
+			<div className="search-element d-flex justify-content-center">
+				<img className="logo" src="../../images/github.svg" alt="Github logo" />
 				<form className="user-search" onSubmit={handleSubmit}>
 					<label>
 						github.com/
