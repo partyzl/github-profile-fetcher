@@ -11,7 +11,7 @@ const reposReducer = (state = initialState, { type, payload }) => {
 		case LOADING_REPO:
 			return { ...state, isLoading: true };
 		case SEARCH_REPO_SUCCESS:
-			return { ...state, isLoading: false, results: payload };
+			return { ...state, isLoading: false, results: payload, error: '' };
 		case SEARCH_REPO_FAILURE:
 			return { ...state, isLoading: false, error: payload };
 		default:

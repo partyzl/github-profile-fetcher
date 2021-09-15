@@ -27,8 +27,8 @@ input {
 #search-btn:hover {
 	background-color: black;
 	color: white;
-	border-top-right-radius: 30%;
-	border-bottom-right-radius: 30%;
+	border-top-right-radius: 100px;
+	border-bottom-right-radius: 100px;
 }
 img {
 	border-radius: 100%;

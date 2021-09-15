@@ -11,7 +11,7 @@ const userReducer = (state = initialState, { type, payload }) => {
 		case LOADING_USER:
 			return { ...state, isLoading: true };
 		case SEARCH_USER_SUCCESS:
-			return { ...state, isLoading: false, user: payload };
+			return { ...state, isLoading: false, user: payload, error: '' };
 		case SEARCH_USER_FAILURE:
 			return { ...state, isLoading: false, error: payload };
 		default:

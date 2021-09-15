@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const ProfileInfo = () => {
-	const { user } = useSelector((state) => state.userReducer);
+	const { user, error } = useSelector((state) => state.userReducer);
 
 	return (
 		<>
