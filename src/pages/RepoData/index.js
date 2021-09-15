@@ -29,7 +29,7 @@ const RepoData = () => {
 					<p>Watchers: {watchers_count}</p>
 				</div>
 				<div className="flex-column">
-					<p>Language: {language}</p>
+					<p>Written in {language}</p>
 				</div>
 			</div>
 		</>

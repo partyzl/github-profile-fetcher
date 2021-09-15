@@ -10,7 +10,10 @@ const RepoList = () => {
 	useEffect(() => {
 		const renderRepos = () => {
 			const userRepos = results.map((repo) => (
-				<Link to={`/${repo.owner.login}/${repo.name}`}> {repo.name}</Link>
+				<Link to={`/${repo.owner.login}/${repo.name}`} key={repo.name}>
+					{' '}
+					{repo.name}
+				</Link>
 			));
 			setRepoList(userRepos);
 		};
