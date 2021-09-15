@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { ProfileInfo } from '../../components';
+import { BackButton, ProfileInfo } from '../../components';
 
 const RepoData = () => {
 	const { results } = useSelector((state) => state.reposReducer);
@@ -13,6 +13,7 @@ const RepoData = () => {
 
 	return (
 		<>
+			<BackButton />
 			<ProfileInfo />
 			<h1>
 				<a href={html_url}>{name}</a>
