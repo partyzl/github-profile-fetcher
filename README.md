@@ -1,6 +1,7 @@
 # Github Profile Fetcher
+#### [Have a go at searching for profiles yourself here](https://track-my-github.netlify.app/)
 ---
-## How to run the App!
+## How to run the app on your own machine!
 - Clone this repo down to your machine
 ```
 git clone https://github.com/partyzl/github-profile-fetcher
