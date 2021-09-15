@@ -8,9 +8,9 @@ const Home = () => {
 		<>
 			<UserSearch />
 			{error ? (
-				error
+				// error
+				<p className="d-flex justify-content-center">Ruh Roh this user doesn't exist, try again</p>
 			) : (
-				// <p className="d-flex justify-content-center">Ruh Roh this user doesn't exist, try again</p>
 				<>
 					<ProfileInfo />
 					<RepoList />
