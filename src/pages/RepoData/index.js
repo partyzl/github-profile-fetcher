@@ -1,15 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { BackButton, ProfileInfo } from '../../components';
+import { useData } from './useData';
 
 const RepoData = () => {
-	const { results } = useSelector((state) => state.reposReducer);
 	const { repo } = useParams();
-
-	// Filters all the results using the repo's name and then grabs the only repo object that's in the array
-	const selectedRepo = results.filter((repository) => repository.name === repo)[0];
-	const { name, html_url, stargazers_count, watchers_count, forks_count, language } = selectedRepo;
+	const { name, html_url, stargazers_count, watchers_count, forks_count, language } = useData(repo);
 
 	return (
 		<>

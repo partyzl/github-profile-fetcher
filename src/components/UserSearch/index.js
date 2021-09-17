@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getRepos, getUserInfo } from '../../redux/actions';
-import github from '../../images/github.svg';
 
 export default () => {
 	const [input, setInput] = useState('');
