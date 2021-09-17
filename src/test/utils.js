@@ -37,6 +37,11 @@ export const renderWithState = (component, initialState) => {
 				{
 					name: 'Arsenal',
 					owner: { login: 'tobikuyo' },
+					html_url: 'https://github.com/tobikuyo/Arsenal',
+					stargazers_count: 0,
+					watchers_count: 0,
+					forks_count: 1,
+					language: 'HTML',
 				},
 			],
 			isLoading: false,
