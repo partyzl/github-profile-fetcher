@@ -9,7 +9,7 @@ describe('UserSearch', () => {
 
 	afterEach(cleanup);
 
-	it('changes the "loading" state for both reducers, before doing fetching from the API', () => {
+	it('changes the "loading" state for both reducers, before fetching from the API', () => {
 		const usernameInput = screen.getByRole('textbox', { name: /github\.com\//i });
 		const searchButton = screen.getByRole('button', { name: /search/i });
 		userEvent.type(usernameInput, 'tobikuyo');
@@ -20,7 +20,7 @@ describe('UserSearch', () => {
 		expect(state.userReducer.isLoading).toBe(true);
 	});
 
-	it('clears the username input when a user presses "Enter" key', () => {
+	it('clears the username input when a user presses the "Enter" key', () => {
 		const usernameInput = screen.getByRole('textbox', { name: /github\.com\//i });
 		userEvent.type(usernameInput, 'tobikuyo{enter}');
 		expect(usernameInput.value).toBe('');

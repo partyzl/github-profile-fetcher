@@ -22,7 +22,7 @@ describe('ProfileInfo', () => {
 		expect(location.textContent).toContain('London');
 	});
 
-	it("shoudld have a link to the user's github page", () => {
+	it("should have a link to the user's github page", () => {
 		const visitLink = screen.getByRole('link', { name: /visit/i });
 		expect(visitLink).toBeInTheDocument();
 		expect(visitLink.href).not.toBeNull();
