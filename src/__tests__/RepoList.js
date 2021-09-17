@@ -1,9 +1,14 @@
 import { cleanup, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router';
 import { RepoList } from '../components';
 
 describe('RepoList', () => {
 	beforeEach(() => {
-		renderWithState(<RepoList />);
+		renderWithState(
+			<MemoryRouter>
+				<RepoList />
+			</MemoryRouter>
+		);
 	});
 
 	afterEach(cleanup);

@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { MemoryRouter } from 'react-router';
 import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../redux/reducers';
@@ -17,10 +16,10 @@ export const renderWithRedux = (component) => {
 
 /**
  * Uses the initial state to render the appropriate JSX elements. By default, this will render elements based on successful redux actions.
- * @param {React.FC} component
+ * @param {React.FC | any} options
  * @param {object} initialState
  */
-export const renderWithState = (component, initialState) => {
+export const renderWithState = (options, initialState) => {
 	initialState ||= {
 		userReducer: {
 			user: {
@@ -54,7 +53,7 @@ export const renderWithState = (component, initialState) => {
 
 	return render(
 		<Provider store={testStore}>
-			<MemoryRouter>{component}</MemoryRouter>
+			{options}
 		</Provider>
 	);
 };
