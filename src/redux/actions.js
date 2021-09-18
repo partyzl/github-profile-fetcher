@@ -20,7 +20,6 @@ export const getUserInfo = (username) => async (dispatch) => {
 		dispatch({ type: SEARCH_USER_SUCCESS, payload: data });
 	} catch (error) {
 		dispatch({ type: SEARCH_USER_FAILURE, payload: error.message });
-		console.error('Error getting user repos ', error.message);
 	}
 };
 
@@ -36,6 +35,5 @@ export const getRepos = (username) => async (dispatch) => {
 		dispatch({ type: SEARCH_REPO_SUCCESS, payload: data });
 	} catch (error) {
 		dispatch({ type: SEARCH_REPO_FAILURE, payload: error.message });
-		console.error('Error getting user repos ', error.message);
 	}
 };

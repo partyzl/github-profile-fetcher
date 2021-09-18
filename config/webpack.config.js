@@ -40,18 +40,7 @@ const config = {
 			{
 				test: /\.(png|svg|jpg|gif|pdf)$/,
 				use: ['file-loader'],
-			},
-			{
-				test: /\.svg$/,
-				use: [
-					{
-						loader: 'svg-url-loader',
-						options: {
-							limit: 10000,
-						},
-					},
-				],
-			}, // transpile image files
+			}
 		],
 	},
 };

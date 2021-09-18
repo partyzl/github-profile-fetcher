@@ -8,17 +8,15 @@ const ProfileInfo = () => {
 		<>
 			<div className="container d-flex justify-content-center profile-box">
 				<div id="profie-pic">
-					{user.avatar_url ? <img src={user.avatar_url} alt="User's Profile Picture" /> : <p></p>}
+					{user.avatar_url && <img src={user.avatar_url} alt="User's Profile Picture" />}
 				</div>
 				<div className="profile-data">
 					<h1 className="username">{user.login}</h1>
-					<h3>{user.location ? user.location : ''}</h3>
-					{user.html_url ? (
+					{user.location && <h3>{user.location}</h3>}
+					{user.html_url && (
 						<a className="visit-link" href={user.html_url} target="_blank">
 							Visit
 						</a>
-					) : (
-						''
 					)}
 				</div>
 			</div>
