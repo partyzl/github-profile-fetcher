@@ -1,6 +1,6 @@
 import { cleanup, screen } from '@testing-library/react';
 import { UserSearch } from '../components';
-import store from '../redux/store';
+import { store } from '../redux/store';
 
 describe('UserSearch', () => {
 	beforeEach(() => {
@@ -15,7 +15,7 @@ describe('UserSearch', () => {
 		userEvent.type(usernameInput, 'tobikuyo');
 		userEvent.click(searchButton);
 
-        const state = store.getState();
+		const state = store.getState();
 		expect(state.reposReducer.isLoading).toBe(true);
 		expect(state.userReducer.isLoading).toBe(true);
 	});

@@ -2,16 +2,23 @@ import '@testing-library/jest-dom/extend-expect';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
+import { PersistGate } from 'redux-persist/integration/react';
 import thunk from 'redux-thunk';
 import rootReducer from '../redux/reducers';
-import store from '../redux/store';
+import { persistor, store } from '../redux/store';
 
 /**
  * Renders the component with the actual store used in the app.
  * @param {React.FC} component
  */
 export const renderWithRedux = (component) => {
-	return render(<Provider store={store}>{component}</Provider>);
+	return render(
+		<Provider store={store}>
+			<PersistGate loading={null} persistor={persistor}>
+				{component}
+			</PersistGate>
+		</Provider>
+	);
 };
 
 /**
@@ -53,7 +60,9 @@ export const renderWithState = (options, initialState) => {
 
 	return render(
 		<Provider store={testStore}>
-			{options}
+			<PersistGate loading={null} persistor={persistor}>
+				{options}
+			</PersistGate>
 		</Provider>
 	);
 };
